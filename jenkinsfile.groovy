@@ -10,7 +10,7 @@ node{
    
     stage("deploy"){
       timeout(time: 15, unit: "MINUTES") {    input message: 'Do you want to approve the deploy in production?', ok: 'Yes'}
-   sshagent(['tomcat']) {
+   sshagent(['']) {
    sh "scp -o StrictHostKeyChecking=no /var/lib/jenkins/workspace/webapp/target/ root@192.168.56.23:/opt/tomcat/webapps"
 }
 
