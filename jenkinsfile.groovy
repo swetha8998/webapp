@@ -12,7 +12,7 @@ node{
       timeout(time: 15, unit: "MINUTES") {    input message: 'Do you want to approve the deploy in production?', ok: 'Yes'}
        
 
-         sh "cpy -rp /var/lib/jenkins/workspace/heloapp/target/maven-0.0.1-SNAPSHOT.war root@192.168.56.23://opt/tomcat/webapps"
+         sh "cp -rp /var/lib/jenkins/workspace/heloapp/target/maven-0.0.1-SNAPSHOT.war root@192.168.56.23://opt/tomcat/webapps"
       
     }
     
