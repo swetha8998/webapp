@@ -13,7 +13,7 @@ node{
       sshagent(['']) {
     
 
-         sh "scp -o StrictHostKeyChecking=no /var/lib/jenkins/workspace/heloapp/target/maven-0.0.1-SNAPSHOT.war root@192.168.56.23://opt/tomcat/webapps"
+         sh "cpy -rp /var/lib/jenkins/workspace/heloapp/target/maven-0.0.1-SNAPSHOT.war root@192.168.56.23://opt/tomcat/webapps"
       }
     }
     
