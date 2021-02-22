@@ -10,10 +10,8 @@ node{
    
     stage("deploy"){
       timeout(time: 15, unit: "MINUTES") {    input message: 'Do you want to approve the deploy in production?', ok: 'Yes'}
-       sshagent(['tomcat']) {
-
-         sh "scp  -o StrictHostKeyChecking=no /var/lib/jenkins/workspace/heloapp/target/maven-0.0.1-SNAPSHOT.war root@192.168.56.23:/opt/tomcat/webapps"
-       }
+       deploy adapters: [tomcat8(credentialsId: 'tomcat', path: '', url: 'http://192.168.56.23:8090/')], contextPath: '/var/lib/jenkins/workspace/heloapp/target', war: '**/*.war"'
     }
-    
 }
+    
+
