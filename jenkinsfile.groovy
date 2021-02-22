@@ -9,8 +9,9 @@ node{
     }
    
     stage("deploy"){
-        
-        echo "in deployement stage" 
+        sshagent(['']) {
+     sh "scp /var/lib/jenkins/workspace/heloapp/target/maven-0.0.1-SNAPSHOT.war root@192.168.56.23://opt/tomcat/webapps"
+}
     }
     
 }
