@@ -19,6 +19,7 @@ node{
    cd /opt/tomcat/bin
    echo "inside if"
    ./startup.sh
+   ps -ef |grep tomcat
    
 else
    cd /opt/tomcat/bin
@@ -26,6 +27,7 @@ else
    ./shutdown.sh
    cp -p /var/lib/jenkins/workspace/webapp/target/simplewebapp.war /opt/tomcat/webapps
     ./startup.sh
+    ps -ef |grep tomcat
 fi'''
      
    }}
