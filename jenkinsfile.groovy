@@ -29,14 +29,14 @@ else
    cp -p /var/lib/jenkins/workspace/webapp/target/simplewebapp.war /opt/tomcat/webapps
     ./startup.sh
     ps -ef |grep tomcat
-     sudo curl http://192.168.56.23:8090/simplewebapp/
+    
 fi'''
      
    
       sh "mkdir /opt/backup"
       sh "cp -p /var/lib/jenkins/workspace/webapp/target/simplewebapp.war /opt/backup"
       sh " echo 'backup is created' "
-      
+      sh "ps -ef | grep tomcat
     
 
   
