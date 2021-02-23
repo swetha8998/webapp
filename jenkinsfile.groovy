@@ -17,10 +17,12 @@ node{
    
    cp -p /var/lib/jenkins/workspace/webapp/target/simplewebapp.war /opt/tomcat/webapps
    cd /opt/tomcat/bin
+   echo "inside if"
    ./startup.sh
    
 else
    cd /opt/tomcat/bin
+   echo "inisde else"
    ./shutdown.sh
    cp -p /var/lib/jenkins/workspace/webapp/target/simplewebapp.war /opt/tomcat/webapps
     ./startup.sh
