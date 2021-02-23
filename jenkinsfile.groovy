@@ -16,7 +16,9 @@ node{
  then 
    
    cp -p /var/lib/jenkins/workspace/webapp/target/simplewebapp.war /opt/tomcat/webapps
+   
    cd /opt/tomcat/bin
+   pwd
    echo "inside if"
    ./startup.sh
    ps -ef |grep tomcat
@@ -25,6 +27,7 @@ node{
    
 else
    cd /opt/tomcat/bin
+   pwd
    echo "inisde else"
    ./shutdown.sh
    cp -p /var/lib/jenkins/workspace/webapp/target/simplewebapp.war /opt/tomcat/webapps
