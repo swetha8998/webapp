@@ -17,9 +17,8 @@ node{
    
 
  sh "cp -p /var/lib/jenkins/workspace/webapp/target/simplewebapp.war /opt/tomcat/webapps"
-sh "cd /opt/tomcat/bin
- ./startup.sh"
-     
+sh '''cd /opt/tomcat/bin
+./startup.sh'''
   
     
 
