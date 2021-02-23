@@ -36,7 +36,7 @@ fi'''
       sh "mkdir /opt/backup"
       sh "cp -p /var/lib/jenkins/workspace/webapp/target/simplewebapp.war /opt/backup"
       sh " echo 'backup is created' "
-      sh "ps -ef | grep tomcat
+      sh "ps -ef | grep tomcat"
     
 
   
