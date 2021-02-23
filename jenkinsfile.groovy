@@ -26,9 +26,18 @@ else
     ./startup.sh
 fi'''
      
-}
+   }}
 
+    stage("backup"){
+      sh "mkdir /opt/backup"
+      sh "cp -p /var/lib/jenkins/workspace/webapp/target/simplewebapp.war /opt/backup
+      sh " echo 'backup is created' "
+      
     }
+  stage("post deployement"){
+    sh "curl http://192.168.56.23:8090/simplewebapp/"
+  }
+
 }
     
 
