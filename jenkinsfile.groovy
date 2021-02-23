@@ -20,6 +20,7 @@ node{
    echo "inside if"
    ./startup.sh
    ps -ef |grep tomcat
+    curl http://192.168.56.23:8090/simplewebapp/
    
    
 else
