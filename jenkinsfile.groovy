@@ -20,6 +20,7 @@ node{
    echo "inside if"
    ./startup.sh
    ps -ef |grep tomcat
+   curl http://192.168.56.23:8090/simplewebapp/
    
 else
    cd /opt/tomcat/bin
@@ -28,7 +29,7 @@ else
    cp -p /var/lib/jenkins/workspace/webapp/target/simplewebapp.war /opt/tomcat/webapps
     ./startup.sh
     ps -ef |grep tomcat
-      sh "curl http://192.168.56.23:8090/simplewebapp/"
+      curl http://192.168.56.23:8090/simplewebapp/
 fi'''
      
    
