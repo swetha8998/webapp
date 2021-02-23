@@ -14,12 +14,16 @@ node{
   sh "whoami"
      sh '''if [ $(ps -ef | grep tomcat | wc -l) == 1 ]
  then 
-   ./opt/tomcat/bin/startup.sh
+   
    cp -p /var/lib/jenkins/workspace/webapp/target/simplewebapp.war /opt/tomcat/webapps
+   cd /opt/tomcat/bin
+   ./startup.sh
+   
 else
-   ./opt/tomcat/bin/shutdown.sh
+   cd /opt/tomcat/bin
+   ./shutdown.sh
    cp -p /var/lib/jenkins/workspace/webapp/target/simplewebapp.war /opt/tomcat/webapps
-    ./opt/tomcat/bin/startup.sh
+    ./startup.sh
 fi'''
      
 }
