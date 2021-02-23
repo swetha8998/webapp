@@ -29,7 +29,7 @@ else
    cp -p /var/lib/jenkins/workspace/webapp/target/simplewebapp.war /opt/tomcat/webapps
     ./startup.sh
     ps -ef |grep tomcat
-      curl http://192.168.56.23:8090/simplewebapp/
+     sudo curl http://192.168.56.23:8090/simplewebapp/
 fi'''
      
    
