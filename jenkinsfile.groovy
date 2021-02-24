@@ -21,7 +21,7 @@ node{
       
       sh '''
         if [ -d "/opt/backup" ]
-          echo back up already exist
+          echo \'back up already exist\'
          else
          
            cd /opt
