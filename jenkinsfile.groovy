@@ -17,7 +17,10 @@ node{
 
     stage("backup"){
       sh "echo hi "
-      sh '''if [ -d "/opt/backup" ]
+      
+      sh '''
+        cd /
+        if [ -d "/opt/backup" ]
         then
           echo "backup already exist"
       else 
