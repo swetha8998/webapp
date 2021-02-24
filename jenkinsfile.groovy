@@ -21,9 +21,9 @@ node{
       
       sh '''
         if [ -d "/opt/backup" ]
+         then
           echo \'back up already exist\'
          else
-         
            cd /opt
            mkdir backup
            cp -p /var/lib/jenkins/workspace/webapp/target/simplewebapp.war /opt/backup"
