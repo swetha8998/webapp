@@ -20,7 +20,7 @@ node{
       sh "echo \'taking the backup\' "
       
       sh '''
-        if [ -d "\opt\backup" ]
+        if [ -d "/opt/backup" ]
           echo back up already exist
          else
          
