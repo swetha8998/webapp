@@ -16,14 +16,9 @@ node{
    }}
 
     stage("backup"){
-      sh "echo hi "
+      sh "echo \'taking the backup\' "
       
       sh '''
-        cd /
-        if [ -d "/opt/backup" ]
-        then
-          echo "backup already exist"
-      else 
         sh "mkdir /opt/backup"
         cp -p /var/lib/jenkins/workspace/webapp/target/simplewebapp.war /opt/backup"
       fi
