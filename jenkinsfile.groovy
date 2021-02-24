@@ -19,7 +19,8 @@ node{
       sh "echo \'taking the backup\' "
       
       sh '''
-        sh "mkdir /opt/backup"
+        cd /opt
+        mkdir backup
         cp -p /var/lib/jenkins/workspace/webapp/target/simplewebapp.war /opt/backup"
       fi
        echo \'backup is created\' '''
