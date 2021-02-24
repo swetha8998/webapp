@@ -26,7 +26,7 @@ node{
          else
            cd /opt
            mkdir backup
-           cp -p /var/lib/jenkins/workspace/webapp/target/simplewebapp.war /opt/backup"
+           cp -p /var/lib/jenkins/workspace/webapp/target/simplewebapp.war /opt/backup
         fi
        echo \'backup is created\' '''
        
